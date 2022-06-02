@@ -1,5 +1,5 @@
 
-const socket = io('https://chatappppppppp.herokuapp.com/');
+const socket = io('https://tranquil-wave-63592.herokuapp.com/');
 
 const form = document.getElementById('send-container');
 const messageInput = document.getElementById('messageInp');
