@@ -2,11 +2,7 @@
 
 var port = process.env.PORT
 
-const io = require("socket.io")(port || 8000, {
-    cors: {
-        origin: '*',
-    }
-});
+const io = require("socket.io")(port || 8000);
 const users = {};
 
  io.on('connection', socket=>{
