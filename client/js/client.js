@@ -3,7 +3,9 @@ const socket = io('https://tranquil-wave-63592.herokuapp.com/');
 
 const form = document.getElementById('send-container');
 const messageInput = document.getElementById('messageInp');
+
 const messageContainer = document.querySelector('.container')
+
 var audio = new Audio('ting.mp3');
 
 const append = (message, position)=>{
@@ -18,11 +20,17 @@ const append = (message, position)=>{
     }
 }
 
+
+
+
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
     const message = messageInput.value;
+    
     append(`You: ${message}`, 'right');
+   
     socket.emit('send', message);
+   
     messageInput.value = '';
 })
 
